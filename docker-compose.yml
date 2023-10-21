@@ -1,0 +1,61 @@
+# version: "3"
+
+# services:
+#   nextjs-app:
+#     container_name: nextjs-container
+#     env_file:
+#       - .env
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3000:3000"
+#     volumes:
+#       - .:/app
+#       - /app/node_modules
+
+# services:
+#   nextjs-app:
+#     container_name: nextjs-container
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - '3000:3000'
+#     env_file:
+#       - .env
+#     volumes:
+#       - .:/app
+#       - node_modules:/app/node_modules
+#     restart: always
+#     tty: true
+#     stdin_open: true
+
+# volumes:
+#   node_modules:
+
+
+version: "3.9"
+services:
+  enthub-app:
+    # platform: "linux/amd64"
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # args:
+      #   NEXT_PUBLIC_CLIENTVAR: "clientvar"
+    env_file:
+      - .env
+    working_dir: /app
+    ports:
+      - "3030:3000"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    restart: always
+    # tty: true
+    environment:
+      - WATCHPACK_POLLING=true
+    # stdin_open: true
+volumes:
+  node_modules:

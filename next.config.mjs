@@ -6,7 +6,8 @@ await import("./src/env.mjs");
 
 /** @type {import("next").NextConfig} */
 const config = {
-     NEXTAUTH_SECRET: [ 'Required' ] 
+     NEXTAUTH_SECRET: [ 'Required' ],
+     output: "standalone"
 };
 
 export default config;
