@@ -1,7 +1,7 @@
 # Like a Saas Project / EntHub
-[about　this project](https://github.com/mhatanorks/enthub/wiki)
+[about project](https://github.com/mhatanorks/enthub/wiki)
 ## 環境構築
-> dockerを使用します。まだインストールしてない場合は以下より
+> dockerを使用するのでインストールしてない場合は以下より
 > - [for mac](https://docs.docker.com/desktop/install/mac-install/)
 > - [for windows](https://docs.docker.com/desktop/install/mac-install/)
 
