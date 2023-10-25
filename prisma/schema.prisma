@@ -83,5 +83,6 @@ model TestModel {
     tako Int 
     kani Int 
     ebi Int 
-    puni Int 
+    puni Int
+    tokkari Int
 }

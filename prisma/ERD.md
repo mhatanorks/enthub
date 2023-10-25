@@ -54,6 +54,7 @@ erDiagram
     Int kani 
     Int ebi 
     Int puni 
+    Int tokkari 
     }
   
     "Post" o|--|| "User" : "createdBy"

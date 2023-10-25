@@ -18,14 +18,17 @@ jobs:
       - name: Generate ERD
         run: npx prisma generate
 
-      - name: Check if ERD.md is updated
+      - name: Check if ERD.md is up-to-date
         run: |
           git diff --exit-code prisma/ERD.md
-        continue-on-error: true
+        id: diff-check
 
-      - name: Fail if ERD.md is not committed
+      - name: Check if ERD.md is committed if there are changes
+        if: steps.diff-check.outcome == 'failure'
         run: |
-          if [ -z "$(git diff prisma/ERD.md)" ]; then
-            echo "ERD.md is updated. Please commit the changes."
+          if [[ $(git diff --name-only --cached | grep prisma/ERD.md) ]]; then
+            echo "ERD.md has been committed."
+          else
+            echo "ERD.md has changes but is not committed. Please commit the updated ERD.md."
             exit 1
           fi
