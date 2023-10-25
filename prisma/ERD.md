@@ -49,6 +49,7 @@ erDiagram
 
   "TestModel" {
     Int id "🗝️"
+    Int uni 
     }
   
     "Post" o|--|| "User" : "createdBy"
