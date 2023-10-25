@@ -1,3 +1,5 @@
+# https://zenn.dev/ttskch/articles/691fb62fbb6b1b
+
 name: Vercel Preview Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
