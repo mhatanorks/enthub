@@ -76,3 +76,7 @@ model VerificationToken {
 
     @@unique([identifier, token])
 }
+
+model TestModel {
+    id Int @id
+}

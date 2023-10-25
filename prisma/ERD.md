@@ -46,6 +46,11 @@ erDiagram
     DateTime expires 
     }
   
+
+  "TestModel" {
+    Int id "🗝️"
+    }
+  
     "Post" o|--|| "User" : "createdBy"
     "Account" o|--|| "User" : "user"
     "Session" o|--|| "User" : "user"
