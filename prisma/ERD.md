@@ -50,6 +50,7 @@ erDiagram
   "TestModel" {
     Int id "🗝️"
     Int uni 
+    Int tako 
     }
   
     "Post" o|--|| "User" : "createdBy"

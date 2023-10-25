@@ -80,4 +80,5 @@ model VerificationToken {
 model TestModel {
     id Int @id
     uni Int 
+    tako Int 
 }
