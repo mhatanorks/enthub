@@ -52,6 +52,7 @@ erDiagram
     Int uni 
     Int tako 
     Int kani 
+    Int ebi 
     }
   
     "Post" o|--|| "User" : "createdBy"

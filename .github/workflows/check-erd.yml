@@ -1,0 +1,31 @@
+name: Check ERD.md update
+
+on:
+  push:
+    paths:
+      - "prisma/**.prisma"
+
+jobs:
+  check-erd-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Prisma CLI
+        run: npm install @prisma/cli prisma-erd-generator @mermaid-js/mermaid-cli
+
+      - name: Generate ERD
+        run: npx prisma generate
+
+      - name: Check if ERD.md is updated
+        run: |
+          git diff --exit-code prisma/ERD.md
+        continue-on-error: true
+
+      - name: Fail if ERD.md is not committed
+        run: |
+          if [ -z "$(git diff prisma/ERD.md)" ]; then
+            echo "ERD.md is updated. Please commit the changes."
+            exit 1
+          fi

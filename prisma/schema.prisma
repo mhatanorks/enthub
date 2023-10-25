@@ -82,4 +82,5 @@ model TestModel {
     uni Int 
     tako Int 
     kani Int 
+    ebi Int 
 }

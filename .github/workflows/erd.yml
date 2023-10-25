@@ -1,12 +1,14 @@
 name: Genetate latest ERD
 
 on:
-  push:
-    paths:
-      - "prisma/ERD.md"
+  workflow_run:
+    workflows: ["Check ERD.md update"]
+    types:
+      - completed
 
 jobs:
   update-wiki:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
