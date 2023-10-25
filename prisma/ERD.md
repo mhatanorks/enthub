@@ -51,6 +51,7 @@ erDiagram
     Int id "🗝️"
     Int uni 
     Int tako 
+    Int kani 
     }
   
     "Post" o|--|| "User" : "createdBy"
