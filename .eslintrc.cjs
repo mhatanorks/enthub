@@ -30,6 +30,24 @@ const config = {
         checksVoidReturn: { attributes: false },
       },
     ],
+    "@typescript-eslint/strict-boolean-expressions": [
+      "warn",
+      { allowString: false, allowNumber: false, allowNullableObject: false },
+    ],
+    "no-implicit-coercion": "error",
+    "@typescript-eslint/restrict-plus-operands": [
+      "error",
+      {
+        checkCompoundAssignments: true,
+        allowBoolean: false,
+        allowNullish: false,
+        allowNumberAndString: false,
+        allowRegExp: false,
+        allowAny: false,
+      },
+    ],
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/rules-of-hooks": "error",
   },
 };
 

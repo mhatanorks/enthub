@@ -1,3 +1,4 @@
+# ER図の変更を検証するワークフロー
 name: Check ERD.md update
 
 on:

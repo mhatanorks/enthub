@@ -1,3 +1,4 @@
+# ER図の変更があった場合リポジトリのwikiに反映させるワークフロー
 name: Genetate latest ERD
 
 on:

@@ -1,3 +1,4 @@
+# メインに以外にPRした場合のステージングデプロイのワークフロー
 # https://zenn.dev/ttskch/articles/691fb62fbb6b1b
 
 name: Vercel Preview Deployment
@@ -5,8 +6,7 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
-  push:
-    # メインブランチ以外にプッシュする場合
+  pull_request:
     branches-ignore:
       - main
 jobs:
