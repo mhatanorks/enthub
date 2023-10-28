@@ -16,3 +16,13 @@ $ docker compose up
 ```
 以下にアクセス
 `http://localhost:3030/`
+
+
+```
+// 最新リモートブランチの取り込み
+$ git fetch origin
+// リモートブランチ確認（省略可）
+$ git branch -a   
+// プルリク受け取ったブランチに移動
+$ git checkout -b {ブランチ名} {リモートのブランチ名}
+```
