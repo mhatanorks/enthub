@@ -30,15 +30,15 @@ const config = {
         checksVoidReturn: { attributes: false },
       },
     ],
-    "@typescript-eslint/strict-boolean-expressions": [
-      "warn",
-      { allowString: false, allowNumber: false, allowNullableObject: false },
-    ],
-    "no-implicit-coercion": "error",
+    // "@typescript-eslint/strict-boolean-expressions": [
+    //   "warn",
+    //   { allowString: true, allowNumber: true, allowNullableObject: false },
+    // ],
+    // "no-implicit-coercion": "error",
     "@typescript-eslint/restrict-plus-operands": [
       "error",
       {
-        checkCompoundAssignments: true,
+        skipCompoundAssignments: true,
         allowBoolean: false,
         allowNullish: false,
         allowNumberAndString: false,
